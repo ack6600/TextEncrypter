@@ -15,7 +15,7 @@ public class TextReader {
 			f = new FileReader(file);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Main.error(e);
 			System.exit(0);
 		}
 		int lines = 0;

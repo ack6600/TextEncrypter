@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Encryptor {
-	public String[] encrypt(String[] document,int key)
+	public String[] encrypt(String[] document,int key) throws NullPointerException
 	{
 		String[] encryptedDoc = new String[document.length];
 		char alphabet[] = "abcdefghijklmnopqrstuvwxyz".toCharArray();
