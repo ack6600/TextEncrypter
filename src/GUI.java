@@ -17,6 +17,10 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 public class GUI extends JPanel implements ActionListener,DocumentListener{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	JButton readButton,writeButton,finishButton;
 	JTextField tf;
 	JFileChooser fc;
@@ -71,7 +75,7 @@ public class GUI extends JPanel implements ActionListener,DocumentListener{
 		if(e.getSource() == readButton)
 		{
 			int val = fc.showOpenDialog(this);
-			if(val==fc.APPROVE_OPTION)
+			if(val==JFileChooser.APPROVE_OPTION)
 			{
 				try {
 					Main.setReadFile(fc.getSelectedFile());
@@ -84,7 +88,7 @@ public class GUI extends JPanel implements ActionListener,DocumentListener{
 		if(e.getSource() == writeButton)
 		{
 			int val = fc.showOpenDialog(this);
-			if(val == fc.APPROVE_OPTION)
+			if(val == JFileChooser.APPROVE_OPTION)
 			{
 				try {
 					Main.setWriteFile(fc.getSelectedFile());
