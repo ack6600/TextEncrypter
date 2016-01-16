@@ -58,6 +58,18 @@ public class Main {
 	}
 	public static void encrypt()
 	{
+		if(readFile == null)
+		{
+			System.out.println("No read file set");
+		}
+		else if(writeFile == null)
+		{
+			System.out.println("No write file set");
+		}
+		else
+		{
+			
+		
 		try {
 			tw.write(enc.encrypt(tr.read(readFile), key),writeFile);
 		} catch (NullPointerException e) {
@@ -66,6 +78,7 @@ public class Main {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			error(e);
+		}
 		}
 	}
 	public static void error(Exception e)

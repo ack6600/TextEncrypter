@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -27,6 +29,7 @@ public class GUI extends JPanel implements ActionListener,DocumentListener{
 	JLabel jl;
 	JSeparator js;
 	File f;
+	static Dimension screenSize;
 	public GUI()
 	{
 		JPanel jp = new JPanel();
@@ -112,9 +115,11 @@ public class GUI extends JPanel implements ActionListener,DocumentListener{
 	public static JFrame createGui()
 	{
 		JFrame j = new JFrame();
+		screenSize = new Dimension(Toolkit.getDefaultToolkit().getScreenSize());
 		j.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		j.add(new GUI());
 		j.pack();
+		j.setLocation(screenSize.width/2, screenSize.height/2);
 		j.setVisible(true);
 		j.setBackground(Color.WHITE);
 		return j;
