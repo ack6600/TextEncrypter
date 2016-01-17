@@ -119,7 +119,7 @@ public class GUI extends JPanel implements ActionListener,DocumentListener{
 		j.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		j.add(new GUI());
 		j.pack();
-		j.setLocation(screenSize.width/2, screenSize.height/2);
+		j.setLocation(0, 0);
 		j.setVisible(true);
 		j.setBackground(Color.WHITE);
 		return j;

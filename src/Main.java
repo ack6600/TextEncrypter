@@ -67,9 +67,7 @@ public class Main {
 			System.out.println("No write file set");
 		}
 		else
-		{
-			
-		
+		{		
 		try {
 			tw.write(enc.encrypt(tr.read(readFile), key),writeFile);
 		} catch (NullPointerException e) {
@@ -79,6 +77,7 @@ public class Main {
 			// TODO Auto-generated catch block
 			error(e);
 		}
+		cleanup();
 		}
 	}
 	public static void error(Exception e)
